@@ -1,0 +1,82 @@
+ * {
+ 	padding: 0;
+ 	margin: 0;
+ 	box-sizing: border-box;
+ }
+
+ body {
+ 	background-color: #F0F0F0;
+ 	font-family: "Oxygen";
+ }
+
+ h1, h2, h3, h4,h5,h6 {
+ 	font-family: "Cardo", serif;
+ 	font-weight: 500;
+ }
+
+	p {
+		font-family: "Oxygen", sans-serif;
+		font-size: 1.1em;
+		margin-bottom: -0.5%;
+	}
+
+
+
+nav{
+	float: right;
+}
+
+.container {
+	/*border: 1px solid red;*/
+	/*padding: 10%;*/
+	/*padding-top: 10%;*/
+	margin: 2% auto;
+ }
+
+main {
+	margin-top: 5%;
+	margin-left: 10%;
+}
+
+.places {
+	margin-top: 5%;
+	margin-bottom: 10%;
+	border-top: 1px solid #CCCCCC;
+	padding-top: 5%;
+}
+
+.places p {
+	margin-bottom: 0.3%;
+}
+
+.input {
+	/*border: 1px solid black;*/
+	display: flex;
+	justify-content: flex-start;
+}
+
+form {
+	/*border: 1px solid green;*/
+	width: 100%;
+	padding: 5%;
+	padding-left: 0;
+}
+
+.input label{
+	font-weight: bold;
+}
+
+.form-control {
+	width: 50%;
+	margin-bottom: 5%;
+	display: inline;
+	margin-left: 5%;
+}
+
+.fc2 {
+	margin-left: 10%;
+}
+
+.btn {
+	width: 66%;
+}

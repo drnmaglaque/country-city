@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Functions</title>
+	<style>
+		body {
+			padding-top: 5%;
+			font-family: sans-serif;
+		}
+		h1 {
+			margin-left: 26%;
+			font-weight: normal;
+		}
+		input {
+			width: 30%;
+			padding: 0.5%;
+		}
+		div {
+			margin-top: 1%;
+			text-align: right;
+			width: 50%;
+		}
+		#output {
+			background-color: #292929;
+			color: #f9f9f9;
+			width: 20%;
+			padding: 3%;
+			margin-left: 24%;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Get Wind Chill Factor</h1>
+	<div>
+	<label for="">Temperature in Farenheit: </label>
+	<input id="input-temp" type="number" placeholder="Temperature">
+	</div>
+	<div>
+	<label for="">Wind Speed:  </label>
+	<input id="input-wind-speed" type="number" placeholder="Wind Speed (m/h)">
+	</div>
+	<div>
+	<button onclick="doInputOutput()">Submit</button>
+	</div>
+
+	<div id="output">
+		
+	</div>
+	
+
+	<script>
+		function doInputOutput() {
+			let temp = Number(document.getElementById("input-temp").value);
+			let wind = Number(document.getElementById("input-wind-speed").value);
+			windChillFactor = windChill(temp, wind);
+			document.getElementById("output").innerHTML = "Wind Chill Factor is " + " " + windChillFactor + "°F";
+		};
+
+		function windChill(tempF, windSpeed) {
+			chillFactorFarenheit = 35.74 + 0.6215 * tempF - 35.75 * (Math.pow(windSpeed, 0.16)) + 0.4275 * tempF * (Math.pow(windSpeed, 0.16));
+			return chillFactorFarenheit.toFixed(1);
+		};
+
+	</script>
+</body>
+</html>
